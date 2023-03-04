@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from '../components/Footer/Footer';
 import HeroImage from '../components/HeroImage';
 
 const Contact = () => {
@@ -111,6 +112,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -6,7 +6,7 @@ export class HeroImage extends Component {
       <div
         className='hero min-h-50'
         style={{
-          backgroundImage: `url("/src/assets/bg.jpg")`,
+          backgroundImage: `url("/src/assets/bgUpNN.png")`,
         }}
       >
         <div className='hero-overlay bg-opacity-60'></div>

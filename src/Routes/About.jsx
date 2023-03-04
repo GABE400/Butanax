@@ -1,5 +1,6 @@
 import React from 'react';
 import myImage from '../assets/pesta.png';
+import Footer from '../components/Footer/Footer';
 import HeroImage from '../components/HeroImage';
 
 const About = () => {
@@ -56,6 +57,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

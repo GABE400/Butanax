@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer/Footer';
 import HeroImage from '../components/HeroImage';
 
 const Services = () => {
@@ -99,6 +100,7 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
