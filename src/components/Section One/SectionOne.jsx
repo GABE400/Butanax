@@ -1,5 +1,5 @@
 import React from 'react';
-import TheGuy from '../../assets/step.png';
+import TheGuy from '../../assets/step-search.png';
 import './style.css';
 
 const SectionOne = () => {
@@ -30,7 +30,7 @@ const SectionOne = () => {
         <img
           src={TheGuy}
           alt='phone app screens'
-          className='max-w-none w-screen pl-20 md:w-auto'
+          className='max-w-none h-fit lg:h-[35rem] w-screen pl-20 md:w-auto'
         />
       </div>
     </section>

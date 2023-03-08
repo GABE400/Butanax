@@ -5,11 +5,14 @@ import HeroImage from '../components/HeroImage';
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    console.log(
+      `Name: ${name}\nEmail: ${email}\Subject: ${subject}\nMessage: ${message}`
+    );
     // TODO: Send form data to server
   };
 
@@ -19,64 +22,6 @@ const Contact = () => {
       <div className='bg-gray-100 min-h-screen py-10'>
         <div className='container mx-auto'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mx-10'>
-            <div className='bg-[#bdc3c7] rounded-lg shadow-lg p-8'>
-              <h2 className='text-lg font-bold mb-4 text-[#3C3B3F] font-mono'>
-                Send us a message
-              </h2>
-              <form onSubmit={handleSubmit}>
-                <div className='mb-4'>
-                  <label
-                    htmlFor='name'
-                    className='block text-[#2C5364] font-bold mb-2'
-                  >
-                    Name
-                  </label>
-                  <input
-                    type='text'
-                    id='name'
-                    className='w-full border border-gray-300 rounded px-4 py-2 leading-tight focus:outline-none focus:shadow-outline'
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </div>
-                <div className='mb-4'>
-                  <label
-                    htmlFor='email'
-                    className='block text-[#2C5364] font-bold mb-2'
-                  >
-                    Email
-                  </label>
-                  <input
-                    type='email'
-                    id='email'
-                    className='w-full border border-gray-300 rounded px-4 py-2 leading-tight focus:outline-none focus:shadow-outline'
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div className='mb-4'>
-                  <label
-                    htmlFor='message'
-                    className='block  text-[#2C5364] font-bold mb-2'
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id='message'
-                    className='w-full border border-gray-300 rounded px-4 py-2 leading-tight focus:outline-none focus:shadow-outline'
-                    rows='5'
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                  />
-                </div>
-                <button
-                  type='submit'
-                  className='bg-[#3C3B3F] hover:bg-[#3A6073] text-white hover:text-[#E9E4F0] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
             <div className='bg-[#bdc3c7] rounded-lg shadow-lg p-8'>
               <h2 className='text-lg font-bold mb-4 text-[#3C3B3F] font-mono'>
                 Get in touch
@@ -108,6 +53,59 @@ const Contact = () => {
                   browntancy@gmail.com
                 </li>
               </ul>
+            </div>
+            <div className='bg-[#bdc3c7] rounded-lg shadow-lg p-8'>
+              <h2 className='text-lg font-bold mb-4 text-[#3C3B3F] font-mono'>
+                Send us a message
+              </h2>
+              <form onSubmit={handleSubmit}>
+                <div className='mb-4'>
+                  <input
+                    type='text'
+                    id='name'
+                    className='w-full border border-gray-300 rounded px-4 py-2 leading-tight focus:outline-none focus:shadow-outline'
+                    placeholder='Your name'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+                <div className='mb-4'>
+                  <input
+                    type='email'
+                    id='email'
+                    className='w-full border border-gray-300 rounded px-4 py-2 leading-tight focus:outline-none focus:shadow-outline'
+                    placeholder='Your email'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className='mb-4'>
+                  <input
+                    type='text'
+                    id='subject'
+                    className='w-full border border-gray-300 rounded px-4 py-2 leading-tight focus:outline-none focus:shadow-outline'
+                    placeholder='Subject'
+                    value={name}
+                    onChange={(e) => setSubject(e.target.value)}
+                  />
+                </div>
+                <div className='mb-4'>
+                  <textarea
+                    id='message'
+                    className='w-full border border-gray-300 rounded px-4 py-2 leading-tight focus:outline-none focus:shadow-outline'
+                    placeholder='Your message'
+                    rows='5'
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                </div>
+                <button
+                  type='submit'
+                  className='bg-[#3C3B3F] hover:bg-[#3A6073] text-white hover:text-[#E9E4F0] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                >
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
         </div>

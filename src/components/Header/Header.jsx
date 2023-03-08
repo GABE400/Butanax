@@ -16,7 +16,9 @@ const Header = () => {
             We understand that pests can be a major nuisance and can compromise
             the safety and hygiene of your home. That's why we're here to help.
           </p>
-          <button className='btn bg-[#c31432]'>Get Started</button>
+          <button className='btn bg-[#c31432]'>
+            <a href='#step'>Get Started</a>
+          </button>
         </div>
       </div>
     </div>
