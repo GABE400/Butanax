@@ -1,11 +1,33 @@
-import React from 'react';
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import TheGuy from '../../assets/step-search.png';
 import './style.css';
 
 const SectionOne = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: 'spring',
+          duration: 1,
+          bounce: 0.3,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({ x: '100vw' });
+    }
+  });
   return (
     <section className='relative'>
-      <div className='custom-shape-divider-top-1677970800'>
+      <div ref={ref} className='custom-shape-divider-top-1677970800'>
         <svg
           data-name='Layer 1'
           xmlns='http://www.w3.org/2000/svg'
@@ -27,9 +49,10 @@ const SectionOne = () => {
       -translate-x-2/3 -translate-y-1/4
     '
       >
-        <img
+        <motion.img
+          animate={animation}
           src={TheGuy}
-          alt='phone app screens'
+          alt='search image'
           className='max-w-none h-fit lg:h-[35rem] w-screen pl-20 md:w-auto'
         />
       </div>

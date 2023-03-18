@@ -3,7 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import './Navbar.css';
-import About from './../../Routes/About';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
